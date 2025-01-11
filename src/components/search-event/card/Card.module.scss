@@ -1,0 +1,166 @@
+.cardWrap {
+  background: linear-gradient(
+    90deg,
+    rgb(12, 32, 97) 0%,
+    rgb(35, 22, 39) 35%,
+    rgb(75, 20, 50) 100%
+  );
+  color: var(--white-100);
+  padding: 24px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  gap: 24px;
+  margin-top: 16px;
+
+  .imgBox {
+    img {
+      color: transparent;
+      width: 280px;
+      height: 152px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 8px;
+    }
+  }
+  .cardInfo {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    width: calc(100% - 300px);
+  }
+  .leftAlign {
+    width: calc(80% - 40px);
+    h4 {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 100;
+      margin-bottom: 8px;
+    }
+  }
+  .eventAddress {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    .heading {
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 600;
+      color: var(--light-5);
+      display: block;
+    }
+    .info {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 400;
+      color: var(--white-100);
+      display: block;
+    }
+    li:not(:first-child) {
+      margin-top: 8px;
+    }
+  }
+  .actionButton {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+    .iconClass {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--black-400);
+      border-radius: 50%;
+      color: var(--tertery-1);
+      cursor: pointer;
+    }
+  }
+}
+@media (min-width: 2400px) {
+  .cardWrap {
+    padding: 32px;
+    margin-top: 24px;
+    .imgBox {
+      img {
+        width: 720px;
+        height: 352px;
+      }
+    }
+    .cardInfo {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      width: calc(100% - 740px);
+    }
+    .leftAlign {
+      width: calc(80% - 40px);
+      h4 {
+        font-size: 32px;
+      }
+      p {
+        font-size: 28px;
+        line-height: normal;
+      }
+    }
+    .eventAddress {
+      .heading {
+        font-size: 24px;
+        line-height: normal;
+      }
+      .info {
+        font-size: 24px;
+        line-height: normal;
+      }
+      li:not(:first-child) {
+        margin-top: 12px;
+      }
+    }
+    .actionButton {
+      .iconClass {
+        width: 70px;
+        height: 70px;
+        font-size: 40px;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .cardWrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    position: relative;
+    .imgBox {
+      img {
+        width: 482px;
+        height: 200px;
+      }
+    }
+    .cardInfo {
+      flex-direction: column;
+      gap: 12px;
+    }
+    .leftAlign {
+      width: 100%;
+    }
+    .actionButton {
+      align-items: flex-start;
+      .iconClass {
+        position: absolute;
+        right: 24px;
+        top: 30px;
+      }
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,165 @@
+.modalWrapper {
+  margin: auto;
+  width: 686px;
+  padding: 12px 40px;
+  background: var(--white-100);
+  border-radius: 4px;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s;
+  position: relative;
+  overflow: auto;
+  max-height: 100vh;
+}
+.modalHeading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+
+  h4 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    margin: 0;
+  }
+  .crossIcon {
+    font-size: 20px;
+    background: var(--light-1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    transition: 0.3s;
+    cursor: pointer;
+    position: absolute;
+    right: 14px;
+    top: 14px;
+  }
+}
+.citySearchBox {
+  position: relative;
+  svg {
+    position: absolute;
+    left: 12px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: var(--dark-2);
+  }
+  input {
+    font-size: 14px;
+    width: 100%;
+    background: var(--light-1);
+    padding: 8px 8px 8px 32px;
+    color: var(--dark-1);
+    outline: none;
+    border-radius: 8px;
+    border: none;
+  }
+}
+.btnLocation {
+  margin: 12px 0 0;
+  padding: 20px 14px 20px 0;
+  svg {
+    color: var(--tertery-1);
+    margin-right: 6px;
+  }
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@media (min-width: 2400px) {
+  .modalWrapper {
+    width: 1200px;
+    padding: 20px 40px;
+  }
+  .modalHeading {
+    margin-bottom: 20px;
+    h4 {
+      font-size: 42px;
+      line-height: normal;
+    }
+    .crossIcon {
+      font-size: 40px;
+      width: 64px;
+      height: 64px;
+    }
+  }
+  .citySearchBox {
+    position: relative;
+    svg {
+      font-size: 32px;
+    }
+    input {
+      font-size: 28px;
+      padding: 12px 12px 12px 48px;
+    }
+  }
+  .btnLocation {
+    font-size: 36px;
+  }
+}
+@media (max-width: 767px) {
+  .modalWrapper {
+    width: 100%;
+    padding: 20px 14px;
+    border-radius: 4px 4px 0 0;
+  }
+  .modalHeading {
+    h4 {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+  @-webkit-keyframes slideIn {
+    from {
+      top: auto;
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      top: auto;
+
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      top: auto;
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      top: auto;
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}

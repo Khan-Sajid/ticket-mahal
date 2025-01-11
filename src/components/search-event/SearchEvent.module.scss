@@ -1,0 +1,28 @@
+.heading {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 600;
+  margin-top: 48px;
+}
+.notFound {
+  display: flex;
+  place-items: center;
+  height: 200px;
+  p {
+    text-align: center;
+    flex: 1;
+  }
+}
+@media (min-width: 2400px) {
+  .heading {
+    font-size: 48px;
+    line-height: 52px;
+  }
+}
+@media (max-width: 480px) {
+  .heading {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 32px;
+  }
+}

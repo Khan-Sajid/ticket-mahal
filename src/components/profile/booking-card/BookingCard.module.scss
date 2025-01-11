@@ -1,0 +1,343 @@
+.bookingList {
+  .item {
+    background: var(--tertery-4);
+    padding: 24px;
+    border-radius: 8px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    .bookingWrap {
+      background: var(--gradient-1);
+      border-radius: 8px;
+      color: var(--white-100);
+      .bookingInfo {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        padding: 16px 40px;
+        img {
+          width: 244px;
+          height: 145px;
+          object-fit: cover;
+          object-position: top;
+          border-radius: 8px;
+        }
+        .infoWrap {
+          width: calc(100% - 268px);
+        }
+        span {
+          display: block;
+        }
+        .singer {
+          font-size: 20px;
+          font-weight: 500;
+        }
+        .type {
+          font-size: 16px;
+          color: var(--light-8);
+          margin-top: 4px;
+          font-weight: 300;
+        }
+        .date {
+          font-size: 15px;
+          font-weight: 700;
+          margin-top: 28px;
+        }
+        .location {
+          font-size: 16px;
+          font-weight: 400;
+          margin-top: 4px;
+        }
+      }
+      .BookingTicket {
+        border-top: 1px dashed var(--white-100);
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 16px 40px;
+        .date {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background: var(--light-8);
+          color: var(--light-7);
+          width: 82px;
+          height: 82px;
+          justify-content: center;
+          border-radius: 4px;
+          font-size: 15px;
+          font-weight: 400;
+          span {
+            font-size: 32px;
+            line-height: 32px;
+            font-weight: 700;
+          }
+        }
+        .whereSeat {
+          display: flex;
+          flex-direction: column;
+          .wing {
+            font-size: 14px;
+            font-weight: 200;
+          }
+          .wingTwo {
+            font-size: 16px;
+            font-weight: 600;
+          }
+        }
+        .btnTicket {
+          margin-left: auto;
+          font-size: 16px;
+          font-weight: 600;
+          padding: 5px 10px;
+          border-radius: 0;
+          border: oldlace;
+          background: var(--tertery-1);
+          color: var(--white-100);
+        }
+      }
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: -4px;
+      top: 60px;
+      bottom: 0;
+      margin: auto;
+      width: 55px;
+      max-height: 48px;
+      background: var(--tertery-4);
+      display: block;
+      border-radius: 0% 50% 50% 0%/50% 50% 50% 50%;
+    }
+    &::after {
+      left: auto;
+      right: -4px;
+      border-radius: 50% 0% 0% 50%/50% 50% 50% 50%;
+    }
+    &.pastShadow {
+      background: var(--tertery-5);
+      &::before,
+      &::after {
+        background: var(--tertery-5);
+      }
+    }
+  }
+}
+.btnMore {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  background: transparent;
+  color: var(--tertery-1);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 32px;
+  border: 1px solid;
+  border-radius: 4px;
+  transition: 0.5s;
+  justify-content: center;
+  width: 50%;
+  margin: 24px auto 0;
+  &:hover {
+    background-color: var(--tertery-1);
+    color: var(--white-100);
+  }
+}
+@media (min-width: 2400px) {
+  .bookingList {
+    .item {
+      margin-top: 24px;
+      .bookingWrap {
+        .bookingInfo {
+          padding: 40px;
+          img {
+            width: 344px;
+            height: 245px;
+          }
+          .infoWrap {
+            width: calc(100% - 368px);
+          }
+          .singer {
+            font-size: 32px;
+          }
+          .type {
+            font-size: 28px;
+          }
+          .date {
+            font-size: 24px;
+          }
+          .location {
+            font-size: 26px;
+          }
+        }
+        .BookingTicket {
+          padding: 40px;
+          .date {
+            width: 120px;
+            height: 120px;
+            font-size: 26px;
+            span {
+              font-size: 32px;
+              line-height: 32px;
+            }
+          }
+          .whereSeat {
+            .wing {
+              font-size: 32px;
+            }
+            .wingTwo {
+              font-size: 36px;
+            }
+          }
+          .btnTicket {
+            font-size: 32px;
+            padding: 12px 24px;
+          }
+        }
+      }
+      &::before,
+      &::after {
+        top: 120px;
+      }
+    }
+  }
+  .btnMore {
+    font-size: 32px;
+    line-height: 40px;
+    padding: 20px 32px;
+    margin: 32px auto 0;
+  }
+}
+@media (max-width: 767px) {
+  .bookingList {
+    .item {
+      padding: 20px;
+      margin-top: 16px;
+      .bookingWrap {
+        .bookingInfo {
+          flex-direction: column;
+          gap: 20px;
+          padding: 16px 26px;
+          img {
+            width: 100%;
+            height: 220px;
+          }
+          .infoWrap {
+            width: 100%;
+          }
+        }
+        .BookingTicket {
+          padding: 16px 26px;
+          flex-wrap: wrap;
+          .date {
+            width: 72px;
+            height: 72px;
+            span {
+              font-size: 32px;
+              line-height: 32px;
+              font-weight: 700;
+            }
+          }
+          .whereSeat {
+            width: calc(100% - 92px);
+          }
+          .btnTicket {
+            width: 100%;
+          }
+        }
+      }
+      &::before,
+      &::after {
+        top: 250px;
+        width: 40px;
+        max-height: 36px;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .bookingList {
+    .item {
+      .bookingWrap {
+        .bookingInfo {
+          gap: 12px;
+          img {
+            height: 200px;
+          }
+          .singer {
+            font-size: 16px;
+          }
+          .type {
+            font-size: 14px;
+          }
+          .date {
+            font-size: 12px;
+            margin-top: 12px;
+          }
+          .location {
+            font-size: 14px;
+          }
+        }
+        .BookingTicket {
+          gap: 12px;
+          .date {
+            width: 62px;
+            height: 62px;
+            font-size: 14px;
+            span {
+              font-size: 22px;
+              line-height: 28px;
+            }
+          }
+          .whereSeat {
+            .wing {
+              font-size: 12px;
+            }
+            .wingTwo {
+              font-size: 14px;
+            }
+          }
+          .btnTicket {
+            font-size: 14px;
+          }
+        }
+      }
+      &::before,
+      &::after {
+        top: 220px;
+      }
+    }
+  }
+  .btnMore {
+    width: 100%;
+  }
+}
+@media (max-width: 375px) {
+  .bookingList {
+    .item {
+      .bookingWrap {
+        .bookingInfo {
+          img {
+            height: 145px;
+          }
+        }
+      }
+      &::before,
+      &::after {
+        top: 250px;
+      }
+    }
+  }
+}
+.noBookings {
+  display: grid;
+  place-items: center;
+  height: 200px;
+}
+.ticketDetails {
+  display: flex;
+  gap: 20px;
+}

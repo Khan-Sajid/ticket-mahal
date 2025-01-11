@@ -1,0 +1,104 @@
+.NotificationBtnWraper {
+  position: relative;
+  margin-right: 24px;
+  button:hover {
+    transform: scale(1.1);
+  }
+  .Notification {
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: var(--white-100);
+  }
+}
+.NotificationWrapper {
+  background: var(--white-100);
+  width: 530px;
+  height: 0; /* Initial height of 0 */
+  transition: height 0.5s ease; /* Smooth transition for height */
+  overflow: auto;
+  border-radius: 4px;
+  position: absolute;
+  right: 0;
+  top: 48px;
+  z-index: 2;
+  &.open {
+    height: 400px;
+    max-height: 400px; /* Expanded height when open */
+  }
+}
+.notificationItem {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 12px;
+  .info {
+    span {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      color: var(--black-100);
+      display: inline-block;
+      padding-bottom: 4px;
+      &.failed {
+        color: var(--tertery-3);
+      }
+    }
+    p {
+      font-size: 14px;
+      line-height: 21px;
+      color: var(--dark-2);
+      margin: 0;
+    }
+  }
+  .times {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 600;
+    color: var(--black-100);
+    margin-left: auto;
+  }
+  &:not(:first-child) {
+    border-top: 1px solid var(--black-100);
+  }
+}
+@media (min-width: 2400px) {
+  .NotificationBtnWraper {
+    margin-right: 24px;
+    .Notification {
+      font-size: 40px;
+    }
+  }
+  .NotificationWrapper {
+    width: 730px;
+    top: 75px;
+    &.open {
+      height: 400px;
+      max-height: 400px; /* Expanded height when open */
+    }
+  }
+  .notificationItem {
+    padding: 16px 20px;
+    gap: 16px;
+    .info {
+      span {
+        font-size: 26px;
+        line-height: normal;
+        padding-bottom: 8px;
+      }
+      p {
+        font-size: 24px;
+        line-height: normal;
+      }
+    }
+    .times {
+      font-size: 20px;
+      line-height: normal;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .NotificationBtnWraper {
+    margin-right: 18px;
+  }
+}

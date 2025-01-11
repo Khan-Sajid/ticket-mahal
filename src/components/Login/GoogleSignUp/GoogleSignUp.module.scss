@@ -1,0 +1,88 @@
+.orLine {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  span {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 12px 0;
+    text-transform: uppercase;
+    color: var(--dark-3);
+    background: white;
+    padding: 0 8px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 1px;
+    background: var(--dark-3);
+    z-index: -1;
+  }
+}
+.googleSignUP {
+  display: flex;
+  gap: 12px;
+  a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: calc(50% - 6px);
+    border: 1px solid var(--light-4);
+    border-radius: 4px;
+    padding: 12px 16px;
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 25px;
+      color: var(--dark-3);
+      margin: 0;
+      text-wrap: nowrap;
+    }
+  }
+}
+@media (min-width: 2400px) {
+  .orLine {
+    span {
+      font-size: 24px;
+      margin: 12px 0;
+      padding: 0 8px;
+    }
+  }
+  .googleSignUP {
+    a {
+      p {
+        font-size: 28px;
+        line-height: normal;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .googleSignUP {
+    a {
+      p {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 420px) {
+  .googleSignUP {
+    a {
+      justify-content: center;
+      p {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,203 @@
+.ticketWrap {
+  h3 {
+    font-size: 22px;
+    font-weight: 500;
+    background: var(--black-100);
+    color: var(--white-100);
+    padding: 14px 16px;
+    margin: 0;
+  }
+  .counterWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 16px;
+    background: var(--white-100);
+    border-bottom: 1px solid var(--light-2);
+    .title {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--black-100);
+    }
+    input {
+      width: 72px;
+      padding: 4px 12px;
+      border: 1px solid var(--dark-3);
+      border-radius: 4px;
+      outline: none;
+    }
+  }
+  .ticketType {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 16px;
+      background: var(--white-100);
+      cursor: pointer;
+      &:not(:first-child) {
+        border-top: 1px solid var(--light-2);
+      }
+      .info {
+        h2 {
+          font-size: 18px;
+          margin: 0;
+          font-weight: 500;
+        }
+        span {
+          font-size: 14px;
+          font-weight: 400;
+          color: var(--dark-2);
+        }
+      }
+      .fees {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--tertery-1);
+      }
+      &.coupon {
+        flex-direction: column;
+        align-items: start;
+        div {
+          display: flex;
+          width: 100%;
+        }
+        p {
+          color: var(--tertery-1);
+        }
+      }
+      .couponInput {
+        flex: 1;
+        padding: 8px;
+        margin-right: 12px;
+      }
+      &:last-child,
+      &.bold {
+        .info {
+          h2 {
+            font-weight: 700;
+          }
+          span {
+            font-weight: 500;
+            color: var(--black-100);
+          }
+        }
+        .fees {
+          color: var(--black-100);
+          font-weight: 700;
+        }
+      }
+      &.active {
+        background: var(--light-8);
+      }
+      &.noTicketSelect {
+        flex-direction: column;
+        h5 {
+          font-size: 18px;
+          font-weight: 500;
+          margin: 16px 0 12px;
+        }
+        p {
+          font-size: 14px;
+          color: var(--dark-2);
+        }
+      }
+    }
+  }
+}
+@media (min-width: 2400px) {
+  .ticketWrap {
+    h3 {
+      font-size: 46px;
+      padding: 28px 16px;
+    }
+    .counterWrap {
+      padding: 28px 16px;
+      .title {
+        font-size: 32px;
+      }
+      input {
+        width: 200px;
+        padding: 20px;
+        font-size: 32px;
+      }
+    }
+    .ticketType {
+      li {
+        padding: 28px 16px;
+        .info {
+          h2 {
+            font-size: 32px;
+          }
+          span {
+            font-size: 32px;
+          }
+        }
+        .fees {
+          font-size: 32px;
+        }
+        .couponInput {
+          flex: 1;
+          padding: 8px;
+          margin-right: 12px;
+        }
+        &.active {
+          background: var(--light-8);
+        }
+        &.noTicketSelect {
+          h5 {
+            font-size: 36px;
+            margin: 26px 0 12px;
+          }
+          p {
+            font-size: 32px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .ticketWrap {
+    margin-top: 32px;
+  }
+}
+@media (max-width: 480px) {
+  .ticketWrap {
+    h3 {
+      font-size: 20px;
+    }
+    .ticketType {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        .info {
+          h2 {
+            font-size: 16px;
+          }
+        }
+        .fees {
+          font-size: 16px;
+        }
+
+        &.noTicketSelect {
+          h5 {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+.tickets {
+  max-height: 360px;
+  overflow-y: scroll;
+  .fees {
+    font-weight: 600 !important;
+    color: var(--tertery-1) !important;
+  }
+}

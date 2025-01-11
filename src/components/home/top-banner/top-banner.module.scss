@@ -1,0 +1,146 @@
+.bannerWrapper {
+  // background: url("/images/home-banner.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 621px;
+  height: 621px;
+  display: flex;
+  align-items: flex-end;
+  .bannerWrap {
+    padding: 40px 0;
+    color: var(--white-100);
+  }
+  .infoEvent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+  h3 {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  p {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 100;
+    b {
+      color: var(--tertery-1);
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      display: inline-block;
+      font-size: 14px;
+      line-height: 21px;
+      margin-left: 16px;
+      svg {
+        margin-right: 4px;
+        color: var(--tertery-1);
+      }
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+  .btnBook {
+    font-size: 18px;
+    font-weight: 600;
+    background: transparent;
+    border: 1px solid var(--white-500);
+    color: var(--white-100);
+    padding: 10px 56px;
+    text-wrap: nowrap;
+    text-decoration: none;
+    &:hover {
+      color: var(--tertery-1);
+      border-color: var(--tertery-1);
+    }
+  }
+}
+@media (min-width: 2400px) {
+  .bannerWrapper {
+    height: 1024px;
+    h3 {
+      font-size: 48px;
+      line-height: normal;
+    }
+    p {
+      font-size: 42px;
+      line-height: normal;
+    }
+    ul {
+      li {
+        font-size: 42px;
+        line-height: normal;
+        margin-left: 32px;
+        svg {
+          margin-right: 12px;
+        }
+      }
+    }
+    .btnBook {
+      font-size: 52px;
+      padding: 20px 100px;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .bannerWrapper {
+    height: 521px;
+  }
+}
+@media (max-width: 991px) {
+  .bannerWrapper {
+    height: 450px;
+    .infoEvent {
+      align-items: flex-end;
+    }
+    h3 {
+      font-size: 16px;
+    }
+    p {
+      display: none;
+    }
+    ul {
+      li {
+        display: block;
+        margin: 8px 0 0;
+        font-size: 12px;
+        line-height: 18px;
+        &:first-child {
+          margin: 0;
+        }
+      }
+    }
+    .btnBook {
+      font-size: 16px;
+      font-weight: 600;
+      padding: 8px 28px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .bannerWrapper {
+    .btnBook {
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 16px;
+    }
+  }
+}
+@media (max-width: 575px) {
+  .bannerWrapper {
+    .btnBook {
+      position: absolute;
+      right: 12px;
+    }
+  }
+}

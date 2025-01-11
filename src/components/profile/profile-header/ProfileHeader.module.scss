@@ -1,0 +1,23 @@
+.mainHeading {
+  font-size: 48px;
+  font-weight: 500;
+  margin: 40px 0 0;
+  color: var(--white-100);
+}
+@media (min-width: 2400px) {
+  .mainHeading {
+    font-size: 68px;
+  }
+}
+@media (max-width: 768px) {
+  .mainHeading {
+    font-size: 38px;
+    margin: 28px 0 0;
+  }
+}
+@media (max-width: 768px) {
+  .mainHeading {
+    font-size: 32px;
+    margin: 16px 0 0;
+  }
+}

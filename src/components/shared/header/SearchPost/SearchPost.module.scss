@@ -1,0 +1,137 @@
+.searchMainWrap {
+  position: relative;
+  margin: auto auto auto 30px;
+}
+.searchBox {
+  svg {
+    position: absolute;
+    left: 12px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  input {
+    font-size: 14px;
+    width: 420px;
+    padding: 8px 8px 8px 32px;
+    color: var(--dark-1);
+    outline: none;
+    border-radius: 8px;
+    border: none;
+  }
+}
+.SearchList {
+  background: var(--white-100);
+  width: 100%;
+  height: 0; /* Initial height of 0 */
+  transition: height 0.5s ease; /* Smooth transition for height */
+  overflow: auto;
+  border-radius: 4px;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  &.open {
+    height: 300px;
+    max-height: 300px; /* Expanded height when open */
+  }
+}
+
+.searchPostItem {
+  padding: 16px;
+  h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--black-100);
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    a {
+      text-decoration: none;
+    }
+    .info {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--dark-2);
+      cursor: pointer;
+      li {
+        margin: 8px 0;
+      }
+      svg {
+        margin-right: 8px;
+      }
+      &:not(:first-child) {
+        margin-top: 8px;
+      }
+    }
+  }
+  &:not(:first-child) {
+    padding-top: 8px;
+  }
+}
+@media (min-width: 2400px) {
+  .searchBox {
+    svg {
+      font-size: 32px;
+    }
+    input {
+      font-size: 28px;
+      width: 920px;
+      padding: 12px 12px 12px 48px;
+    }
+  }
+  .SearchList {
+    top: 75px;
+    &.open {
+      height: 500px;
+      max-height: 500px; /* Expanded height when open */
+    }
+  }
+  .searchPostItem {
+    h2 {
+      font-size: 28px;
+    }
+    ul {
+      .info {
+        font-size: 24px;
+        svg {
+          margin-right: 12px;
+        }
+        &:not(:first-child) {
+          margin-top: 12px;
+        }
+      }
+    }
+    &:not(:first-child) {
+      padding-top: 12px;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .searchMainWrap {
+    margin: 0 24px 0;
+    width: 100%;
+  }
+  .searchBox {
+    width: 100%;
+    input {
+      font-size: 12px;
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .searchMainWrap {
+    margin: 0 24px 0 auto;
+    width: auto;
+  }
+  .searchBox {
+    svg {
+      position: relative;
+      color: white;
+      right: 0;
+      width: fit-content;
+    }
+  }
+}

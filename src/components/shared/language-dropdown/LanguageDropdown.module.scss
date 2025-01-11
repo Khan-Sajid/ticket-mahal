@@ -1,0 +1,78 @@
+.NotificationBtnWraper {
+  position: relative;
+  margin-right: 24px;
+}
+.NotificationWrapper {
+  background: var(--white-100);
+  width: 100px;
+  height: 0; /* Initial height of 0 */
+  transition: height 0.5s ease; /* Smooth transition for height */
+  overflow: auto;
+  border-radius: 4px;
+  position: absolute;
+  right: 0;
+  top: 48px;
+  &.open {
+    height: 110px;
+    max-height: 110px; /* Expanded height when open */
+  }
+}
+.languageItem {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  color: var(--black-100);
+  padding: 8px 12px;
+  display: block;
+  text-decoration: none;
+  transition: 0.5s;
+  &:not(:first-child) {
+    border-top: 1px solid var(--black-100);
+  }
+  &:hover {
+    color: var(--tertery-1);
+  }
+}
+.LanguageBtn {
+  background: none;
+  border: none;
+}
+@media (min-width: 2400px) {
+  .LanguageBtn {
+    img {
+      width: 52px;
+    }
+  }
+  .NotificationWrapper {
+    top: 75px;
+    width: 300px;
+    &.open {
+      height: 200px;
+      max-height: 200px; /* Expanded height when open */
+    }
+  }
+  .languageItem {
+    font-size: 32px;
+    line-height: normal;
+    padding: 8px 12px;
+  }
+}
+@media (max-width: 1024px) {
+  .NotificationBtnWraper {
+    margin-right: 18px;
+  }
+}
+@media (max-width: 991px) {
+  .LanguageBtn {
+    img {
+      width: 36px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .LanguageBtn {
+    img {
+      width: auto;
+    }
+  }
+}

@@ -1,0 +1,486 @@
+.crossIcon {
+  font-size: 20px;
+  background: var(--light-1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  transition: 0.3s;
+  cursor: pointer;
+  position: absolute;
+  right: 12px;
+  top: 4px;
+  z-index: 10;
+}
+.mainWrapper {
+  display: flex;
+  margin: auto;
+  width: 774px;
+  border-radius: 4px;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s;
+  position: relative;
+  overflow: auto;
+  max-height: 100vh;
+}
+
+.item {
+  background: var(--tertery-4);
+  padding: 24px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  .bookingWrap {
+    background: var(--gradient-1);
+    border-radius: 8px;
+    color: var(--white-100);
+    .bookingInfo {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 16px 40px;
+      img {
+        width: 244px;
+        height: 145px;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 8px;
+      }
+      .infoWrap {
+        width: calc(100% - 268px);
+        display: flex;
+        flex-direction: column;
+      }
+      span {
+        display: inline-block;
+      }
+      .singer {
+        font-size: 20px;
+        font-weight: 500;
+      }
+      .type {
+        font-size: 16px;
+        color: var(--light-8);
+        margin-top: 4px;
+        font-weight: 300;
+      }
+      .date {
+        font-size: 15px;
+        font-weight: 700;
+        margin-top: 28px;
+      }
+      .location {
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 4px;
+      }
+    }
+    .ticketInfoWrap {
+      border-top: 1px dashed var(--white-100);
+      padding: 28px 40px 16px;
+    }
+    .BookingTicket {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 12px;
+      background: var(--white-100);
+      padding: 14px 16px;
+      border-radius: 12px;
+      .items {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background: var(--light-1);
+        color: var(--black-100);
+        width: 100%;
+        padding: 12px;
+        .info {
+          span {
+            display: block;
+          }
+          .wing {
+            font-size: 14px;
+            font-weight: 300;
+          }
+          .wingInfo {
+            font-size: 20px;
+            font-weight: 500;
+            padding: 4px 0 4px;
+          }
+          .bookingId {
+            font-size: 10px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    .fees {
+      background: var(--white-100);
+      padding: 14px 16px;
+      border-radius: 12px;
+      margin-top: 4px;
+      color: var(--black-100);
+      ul {
+        margin: 0;
+        padding: 12px;
+        list-style: none;
+        background: var(--light-1);
+        li {
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          font-weight: 400;
+          justify-content: space-between;
+          margin-bottom: 4px;
+          &:last-child {
+            border-top: 1px solid var(--light-5);
+            padding-bottom: 0;
+            padding-top: 4px;
+          }
+        }
+      }
+    }
+  }
+  .buttonGroupWrapper {
+    background: var(--white-100);
+    padding: 14px 16px;
+    border-radius: 12px;
+    margin-top: 4px;
+    color: var(--black-100);
+    .butttonGroup {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      background: var(--light-1);
+      padding: 12px;
+      .btnDownload {
+        font-size: 14px;
+        font-weight: 700;
+        border: none;
+        background: transparent;
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        &:first-child {
+          margin-right: auto;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: -4px;
+    top: 175px;
+    bottom: 0;
+    width: 55px;
+    max-height: 48px;
+    background: var(--tertery-4);
+    display: block;
+    border-radius: 0% 50% 50% 0%/50% 50% 50% 50%;
+  }
+  &::after {
+    left: auto;
+    right: -4px;
+    border-radius: 50% 0% 0% 50%/50% 50% 50% 50%;
+  }
+  &.pastShadow {
+    background: var(--tertery-5);
+    &::before,
+    &::after {
+      background: var(--tertery-5);
+    }
+  }
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@media (min-width: 2400px) {
+  .mainWrapper {
+    width: 1200px;
+  }
+  .crossIcon {
+    font-size: 40px;
+    width: 64px;
+    height: 64px;
+  }
+  .item {
+    .bookingWrap {
+      .bookingInfo {
+        padding: 40px;
+        img {
+          width: 344px;
+          height: 245px;
+        }
+        .infoWrap {
+          width: calc(100% - 368px);
+        }
+        span {
+          display: block;
+        }
+        .singer {
+          font-size: 32px;
+        }
+        .type {
+          font-size: 28px;
+        }
+        .date {
+          font-size: 24px;
+        }
+        .location {
+          font-size: 26px;
+        }
+      }
+      .ticketInfoWrap {
+        padding: 40px;
+      }
+      .BookingTicket {
+        padding: 20px;
+
+        .items {
+          img {
+            width: 150px;
+          }
+          .info {
+            span {
+              display: block;
+            }
+            .wing {
+              font-size: 24px;
+            }
+            .wingInfo {
+              font-size: 30px;
+            }
+            .bookingId {
+              font-size: 24px;
+            }
+          }
+        }
+      }
+      .fees {
+        padding: 20px;
+        margin-top: 12px;
+        ul {
+          li {
+            font-size: 28px;
+            &:last-child {
+              padding-top: 8px;
+            }
+          }
+        }
+      }
+    }
+    .buttonGroupWrapper {
+      padding: 20px;
+      margin-top: 12px;
+      .butttonGroup {
+        .btnDownload {
+          font-size: 28px;
+          gap: 12px;
+        }
+      }
+    }
+    &::before,
+    &::after {
+      content: "";
+      top: 325px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .crossIcon {
+    right: 4px;
+    top: 4px;
+  }
+  .mainWrapper {
+    width: 100%;
+    padding: 0;
+    border-radius: 24px 24px 0 0;
+    display: block;
+    bottom: 0;
+  }
+  /* Add Animation */
+
+  @-webkit-keyframes slideIn {
+    from {
+      top: auto;
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      top: auto;
+
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      top: auto;
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      top: auto;
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .item {
+    padding: 20px;
+    .bookingWrap {
+      .bookingInfo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 16px 26px;
+        img {
+          width: 200px;
+          height: auto;
+        }
+        .infoWrap {
+          width: 100%;
+        }
+        .singer {
+          font-size: 14px;
+        }
+        .type {
+          font-size: 12px;
+        }
+        .date {
+          font-size: 12px;
+          margin-top: 12px;
+        }
+        .location {
+          font-size: 12px;
+        }
+        span {
+          display: block;
+        }
+      }
+      .ticketInfoWrap {
+        padding: 16px 26px;
+      }
+      .BookingTicket {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 12px;
+        background: var(--white-100);
+        padding: 14px 16px;
+        border-radius: 12px;
+        .items {
+          .imgBar {
+            width: 50px;
+          }
+          .info {
+            span {
+              display: block;
+            }
+            .wing {
+              font-size: 12px;
+              font-weight: 300;
+            }
+            .wingInfo {
+              font-size: 14px;
+              padding: 0;
+            }
+          }
+        }
+      }
+      .fees {
+        ul {
+          li {
+            font-size: 12px;
+            margin-bottom: 2px;
+          }
+        }
+      }
+    }
+    .buttonGroupWrapper {
+      .butttonGroup {
+        gap: 20px;
+        .btnDownload {
+          font-size: 12px;
+          gap: 4px;
+        }
+      }
+    }
+    &::before,
+    &::after {
+      top: 340px;
+      width: 40px;
+      max-height: 40px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .item {
+    .bookingWrap {
+      .fees {
+        ul {
+          li {
+            font-size: 9px;
+          }
+        }
+      }
+    }
+    .buttonGroupWrapper {
+      .butttonGroup {
+        gap: 4px;
+        .btnDownload {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 320px) {
+  .item {
+    .buttonGroupWrapper {
+      .butttonGroup {
+        flex-direction: column;
+        align-items: flex-start;
+        &:first-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

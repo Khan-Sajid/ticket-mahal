@@ -1,0 +1,14 @@
+.otpInput {
+  width: calc(23% - 20px) !important;
+  height: 45px;
+  text-align: center;
+  background: var(--light-3);
+  border: 1px solid var(--light-4);
+  border-radius: 4px;
+  outline: none;
+}
+@media (min-width: 2400px) {
+  .otpInput {
+    height: 70px;
+  }
+}

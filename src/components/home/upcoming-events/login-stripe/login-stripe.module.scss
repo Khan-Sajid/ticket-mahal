@@ -1,0 +1,65 @@
+.loginStripe {
+  background: linear-gradient(
+    90deg,
+    rgba(12, 32, 97, 1) 0%,
+    rgba(35, 22, 39, 1) 35%,
+    rgba(75, 20, 50, 1) 100%
+  );
+  color: var(--white-100);
+  padding: 32px 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+  gap: 52px;
+  margin: -130px 0 60px;
+  border-radius: 12px;
+  h4 {
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 800;
+  }
+  p {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 300;
+    margin: 0;
+  }
+}
+@media (min-width: 2400px) {
+  .loginStripe {
+    padding: 60px 120px;
+    margin: -260px 0 50px;
+    h4 {
+      font-size: 70px;
+      line-height: normal;
+    }
+    p {
+      font-size: 36px;
+      line-height: normal;
+    }
+  }
+}
+@media (max-width: 999px) {
+  .loginStripe {
+    padding: 32px;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .loginStripe {
+    padding: 16px;
+    margin: -120px 0 32px;
+    h4 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    p {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.popupWrapper {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 2;
+  .body {
+    overscroll-behavior: contain;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .popupWrapper {
+    .body {
+      left: 0;
+      top: auto;
+      bottom: 0;
+      transform: none;
+    }
+  }
+}

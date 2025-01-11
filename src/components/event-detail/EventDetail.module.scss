@@ -1,0 +1,77 @@
+.decriptionBox {
+  background: var(--white-100);
+  padding: 24px;
+  box-shadow: var(--shadow-1);
+  p {
+    font-size: 16px;
+    line-height: 28px;
+    margin: 0;
+    color: var(--light-7);
+    &:not(:first-child) {
+      margin-top: 28px;
+    }
+  }
+  &.roundCornor {
+    border-radius: 8px;
+    margin-top: 32px;
+  }
+  &.mapBox {
+    iframe {
+      width: 100%;
+      height: 374px;
+    }
+  }
+}
+.infoSectionWrap {
+  margin-top: 48px;
+}
+@media (min-width: 2400px) {
+  .decriptionBox {
+    padding: 40px;
+    p {
+      font-size: 32px;
+      line-height: normal;
+      &:not(:first-child) {
+        margin-top: 40px;
+      }
+    }
+    &.roundCornor {
+      margin-top: 48px;
+    }
+    &.mapBox {
+      iframe {
+        height: 674px;
+      }
+    }
+  }
+  .infoSectionWrap {
+    margin-top: 48px;
+  }
+}
+@media (max-width: 991px) {
+  .decriptionBox {
+    padding: 16px;
+    p {
+      font-size: 14px;
+      line-height: 24px;
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+  }
+  .infoSectionWrap {
+    gap: 20px;
+    margin-top: 32px;
+  }
+}
+@media (max-width: 480px) {
+  .decriptionBox {
+    &.roundCornor {
+      margin-top: 20px;
+    }
+  }
+  .infoSectionWrap {
+    gap: 20px;
+    margin-top: 24px;
+  }
+}

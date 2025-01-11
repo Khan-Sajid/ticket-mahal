@@ -1,0 +1,110 @@
+.headingInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+
+  h2 {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 700;
+    margin: 0;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+  }
+  a {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--tertery-1);
+    text-decoration: none;
+  }
+}
+.cardList {
+  :global {
+    .slick-slide {
+      padding: 0 8px;
+    }
+    .slick-prev,
+    .slick-next {
+      font-size: 18px;
+      color: var(--tertery-1);
+      background: var(--black-700);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      z-index: 1;
+      transition: 0.3s;
+      &:before {
+        display: none;
+      }
+      &:hover {
+        background: var(--tertery-1);
+        color: var(--white-100);
+      }
+    }
+    .slick-prev {
+      left: -12px;
+    }
+    .slick-next {
+      right: -12px;
+    }
+  }
+}
+@media (min-width: 2400px) {
+  .headingInfo {
+    h2 {
+      font-size: 62px;
+      line-height: normal;
+    }
+    p {
+      font-size: 36px;
+      line-height: normal;
+    }
+    a {
+      font-size: 42px;
+    }
+  }
+  .cardList {
+    :global {
+      .slick-prev,
+      .slick-next {
+        width: 70px;
+        height: 70px;
+        font-size: 40px;
+      }
+      .slick-prev {
+        left: -24px;
+      }
+      .slick-next {
+        right: -24px;
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .headingInfo {
+    h2 {
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .headingInfo {
+    div {
+      width: 70%;
+    }
+  }
+}

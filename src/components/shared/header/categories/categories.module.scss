@@ -1,0 +1,84 @@
+.secondNav {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid var(--white-500);
+  padding: 8px;
+  margin-top: 12px;
+  overflow-x: scroll;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  white-space: nowrap; /* Keep content in a single line */
+  -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer and Edge */
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit browsers (Chrome, Safari) */
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-flex;
+    overflow-x: scroll;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    li {
+      display: inline-block;
+      margin-right: 12px;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--black-400);
+        color: var(--white-100);
+        font-size: 14px;
+        font-weight: 400;
+        padding: 6px 8px;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: 0.2s;
+        border: unset;
+        &.active {
+          color: var(--tertery-1);
+        }
+        &:hover {
+          color: var(--tertery-1);
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+@media (min-width: 2400px) {
+  .secondNav {
+    padding: 12px;
+    margin-top: 24px;
+    ul {
+      li {
+        margin-right: 12px;
+        a {
+          font-size: 32px;
+          padding: 12px 24px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .secondNav {
+    padding: 8px 0 0;
+    margin-top: 9px;
+    justify-content: flex-start;
+    ul {
+      li {
+        margin-right: 8px;
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

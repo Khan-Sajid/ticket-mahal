@@ -1,0 +1,58 @@
+export const pastEvents = [
+  {
+    id: 1,
+    eventName: "Name of Event 1",
+    eventImage: "/images/past-event.svg",
+    eventDes:
+      "It could imply events such as book signings, contract signings, ormilestone acknowledgments where sigature.",
+    eventAddress: "Neharu Stadium, New Delhi",
+    eventDate: "24 July, 2024, 9:00 PM - 11:00 PM",
+    viewCount: "3.3K",
+    totalSeat: "50000",
+    bookedSeat: "47877",
+    rating: "5.7/10",
+    comment: "55k",
+  },
+  {
+    id: 2,
+    eventName: "Name of Event 2",
+    eventImage: "/images/past-event2.svg",
+    eventDes:
+      "It could imply events such as book signings, contract signings, ormilestone acknowledgments where sigature.",
+    eventAddress: "Neharu Stadium, New Delhi",
+    eventDate: "24 July, 2024, 9:00 PM - 11:00 PM",
+    viewCount: "3.3K",
+    totalSeat: "50000",
+    bookedSeat: "47877",
+    rating: "5.7/10",
+    comment: "55k",
+  },
+  {
+    id: 3,
+    eventName: "Name of Event 3",
+    eventImage: "/images/past-event2.svg",
+    eventDes:
+      "It could imply events such as book signings, contract signings, ormilestone acknowledgments where sigature.",
+    eventAddress: "Neharu Stadium, New Delhi",
+    eventDate: "24 July, 2024, 9:00 PM - 11:00 PM",
+    viewCount: "3.3K",
+    totalSeat: "50000",
+    bookedSeat: "47877",
+    rating: "5.7/10",
+    comment: "55k",
+  },
+  {
+    id: 4,
+    eventName: "Name of Event 4",
+    eventImage: "/images/past-event.svg",
+    eventDes:
+      "It could imply events such as book signings, contract signings, ormilestone acknowledgments where sigature.",
+    eventAddress: "Neharu Stadium, New Delhi",
+    eventDate: "24 July, 2024, 9:00 PM - 11:00 PM",
+    viewCount: "3.3K",
+    totalSeat: "50000",
+    bookedSeat: "47877",
+    rating: "5.7/10",
+    comment: "55k",
+  },
+];

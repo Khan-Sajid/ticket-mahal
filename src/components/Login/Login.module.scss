@@ -1,0 +1,231 @@
+.crossIcon {
+  font-size: 20px;
+  background: var(--light-1);
+  color: var(--dark-1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  transition: 0.3s;
+  cursor: pointer;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  z-index: 10;
+}
+.mainWrapper {
+  display: flex;
+  flex-flow: wrap;
+  margin: auto;
+  width: 1020px;
+  border-radius: 4px;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s;
+  position: relative;
+  overflow: auto;
+  max-height: 100vh;
+  justify-content: center;
+  .formBox {
+    position: relative;
+    width: 55%;
+    padding: 32px 64px;
+    background: var(--white-100);
+    height: 100%;
+    .topHeading {
+      font-size: 48px;
+      font-weight: 600;
+      color: var(--dark-1);
+    }
+    .info {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      color: var(--dark-3);
+    }
+  }
+  .imageBox {
+    width: 45%;
+    background: url(/images/recommendation2.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    img {
+      position: relative;
+      z-index: 10;
+      margin: 60px;
+      width: 336px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(#00000000, #000000b3, #302e2e);
+    }
+  }
+}
+.signUpFirst {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+  color: var(--dark-3);
+  margin-top: 16px;
+  text-align: center;
+  a {
+    color: var(--tertery-1);
+    margin-left: 4px;
+    text-decoration: none;
+  }
+  &.left {
+    text-align: left;
+    color: var(--tertery-1);
+    cursor: pointer;
+  }
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@media (min-width: 2400px) {
+  .crossIcon {
+    font-size: 40px;
+    width: 64px;
+    height: 64px;
+  }
+  .mainWrapper {
+    width: 1400px;
+    .formBox {
+      .info {
+        font-size: 26px;
+        line-height: 34px;
+      }
+    }
+    .imageBox {
+      img {
+        width: 400px;
+      }
+    }
+  }
+  .signUpFirst {
+    font-size: 28px;
+    line-height: normal;
+    margin-top: 24px;
+  }
+}
+@media (max-width: 1200px) {
+  .mainWrapper {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .mainWrapper {
+    .formBox {
+      padding: 16px 20px;
+      .topHeading {
+        font-size: 36px;
+      }
+      .info {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        color: var(--dark-3);
+      }
+    }
+    .imageBox {
+      img {
+        width: auto;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .mainWrapper {
+    flex-direction: column-reverse;
+    border-radius: 4px;
+    .formBox {
+      width: 100%;
+      border-radius: 24px 24px 0 0;
+      // margin-top: -40px;
+      z-index: 1;
+      background: var(--light-12);
+    }
+    .imageBox {
+      width: 100%;
+      img {
+        width: 336px;
+        margin: 50px 20px 80px;
+      }
+    }
+  }
+  @-webkit-keyframes slideIn {
+    from {
+      top: auto;
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      top: auto;
+
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      top: auto;
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      top: auto;
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .mainWrapper {
+    .formBox {
+      .topHeading {
+        font-size: 28px;
+      }
+      .info {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    .imageBox {
+      img {
+        width: auto;
+      }
+    }
+  }
+}

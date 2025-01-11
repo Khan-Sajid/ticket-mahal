@@ -1,0 +1,131 @@
+.modalWrapper {
+  margin: auto;
+  width: 100%;
+  padding: 20px 14px;
+  border-radius: 24px 24px 0 0;
+  background: var(--light-12);
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s;
+  position: relative;
+  overflow: auto;
+  max-height: 100vh;
+  color: var(--dark-1);
+}
+.modalHeading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+
+  h4 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    margin: 0;
+  }
+  .crossIcon {
+    font-size: 20px;
+    background: var(--light-1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    transition: 0.3s;
+    cursor: pointer;
+    position: absolute;
+    right: 14px;
+    top: 14px;
+  }
+}
+.citySearchBox {
+  position: relative;
+  svg {
+    position: absolute;
+    left: 12px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: var(--dark-2);
+  }
+  input {
+    font-size: 14px;
+    width: 100%;
+    background: var(--white-100);
+    padding: 8px 8px 8px 32px;
+    color: var(--dark-1);
+    outline: none;
+    border-radius: 8px;
+    border: none;
+  }
+}
+.SearchList {
+  border-radius: 4px;
+}
+
+.searchPostItem {
+  padding: 16px;
+  h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--black-100);
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    a {
+      text-decoration: none;
+    }
+    .info {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--dark-2);
+      cursor: pointer;
+      li {
+        margin: 8px 0;
+      }
+      svg {
+        margin-right: 8px;
+      }
+      &:not(:first-child) {
+        margin-top: 8px;
+      }
+    }
+  }
+  &:not(:first-child) {
+    padding-top: 8px;
+  }
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {
+    top: auto;
+    bottom: -300px;
+    opacity: 0;
+  }
+  to {
+    top: auto;
+
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    top: auto;
+    bottom: -300px;
+    opacity: 0;
+  }
+  to {
+    top: auto;
+    bottom: 0;
+    opacity: 1;
+  }
+}

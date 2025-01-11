@@ -1,0 +1,17 @@
+.videoWrapper {
+  margin-top: 20px;
+  video {
+    width: 100%;
+    border-radius: 8px;
+  }
+}
+@media (min-width: 2400px) {
+  .videoWrapper {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .videoWrapper {
+    margin-top: 20px;
+  }
+}

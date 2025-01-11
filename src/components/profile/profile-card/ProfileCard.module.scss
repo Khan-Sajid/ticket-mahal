@@ -1,0 +1,229 @@
+.mainWrap {
+  background: var(--white-100);
+  border-radius: 12px;
+  padding-bottom: 68px;
+  overflow: hidden;
+  margin: 16px 0 48px;
+  .cardWrap {
+    background: linear-gradient(
+      90deg,
+      rgb(12, 32, 97) 0%,
+      rgb(35, 22, 39) 35%,
+      rgb(75, 20, 50) 100%
+    );
+    color: var(--white-100);
+    .userDetail {
+      display: flex;
+      align-items: self-start;
+      padding: 28px 16px 8px 228px;
+      position: relative;
+      .userImage {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: absolute;
+        left: 48px;
+        top: 16px;
+        img {
+          width: 100% !important;
+          object-position: center;
+        }
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          font-size: 12px;
+          line-height: 18px;
+          padding: 12px 0;
+          gap: 4px;
+          background: var(--black-100);
+          color: var(--white-100);
+          border: none;
+          position: absolute;
+          bottom: 0;
+          z-index: 1;
+          svg {
+            font-size: 16px;
+          }
+        }
+      }
+      .userInfo {
+        h3 {
+          font-size: 26px;
+          font-weight: 600;
+        }
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          li {
+            &:not(:first-child) {
+              margin-top: 4px;
+            }
+            svg {
+              margin-right: 8px;
+            }
+            span {
+              font-size: 14px;
+              line-height: 21px;
+              font-weight: 200;
+            }
+          }
+        }
+      }
+    }
+    a {
+      margin-left: auto;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--tertery-1);
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+  }
+}
+
+@media (min-width: 2400px) {
+  .mainWrap {
+    padding-bottom: 100px;
+    .cardWrap {
+      .userDetail {
+        padding: 40px 16px 32px 328px;
+        .userImage {
+          width: 250px;
+          height: 250px;
+          left: 48px;
+          top: 16px;
+          button {
+            font-size: 20px;
+            line-height: 28px;
+            bottom: 4px;
+            svg {
+              font-size: 24px;
+            }
+          }
+        }
+        .userInfo {
+          h3 {
+            font-size: 48px;
+          }
+          ul {
+            li {
+              &:not(:first-child) {
+                margin-top: 8px;
+              }
+              svg {
+                margin-right: 12px;
+              }
+              span {
+                font-size: 28px;
+                line-height: 32px;
+              }
+            }
+          }
+        }
+      }
+      a {
+        font-size: 32px;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .mainWrap {
+    padding-bottom: 0;
+    margin: 16px 0 32px;
+    .cardWrap {
+      height: 112px;
+      .userDetail {
+        padding: 24px 16px;
+        .userImage {
+          width: 120px;
+          height: 120px;
+          left: 0;
+          right: 0;
+          margin: auto;
+          top: 16px;
+          button {
+            font-size: 10px;
+            line-height: 10px;
+            padding: 8px 0;
+            svg {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+    .userInfoBottom {
+      padding: 40px 20px 20px;
+      h3 {
+        font-size: 26px;
+        font-weight: 600;
+        color: var(--black-100);
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          &:not(:first-child) {
+            margin-top: 4px;
+          }
+          svg {
+            margin-right: 8px;
+            color: var(--black-100);
+          }
+          span {
+            font-size: 14px;
+            line-height: 21px;
+            font-weight: 200;
+            color: var(--black-100);
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 420px) {
+  .mainWrap {
+    margin: 16px 0 24px;
+    .cardWrap {
+      height: 80px;
+      .userDetail {
+        .userImage {
+          width: 90px;
+          height: 90px;
+
+          button {
+            font-size: 8px;
+            svg {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+      a {
+        font-size: 10px;
+      }
+    }
+    .userInfoBottom {
+      padding: 32px 20px 12px;
+      h3 {
+        font-size: 20px;
+      }
+      ul {
+        li {
+          span {
+            font-size: 12px;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+  }
+}

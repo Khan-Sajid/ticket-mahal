@@ -1,0 +1,122 @@
+.scheduleList {
+  .item {
+    padding: 20px 24px;
+    background: var(--white-100);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-1);
+    .times {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: var(--light-2);
+      width: 64px;
+      height: 64px;
+      font-size: 12px;
+      justify-content: center;
+      border-radius: 4px;
+      .date {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 16px;
+      }
+    }
+    .actionBtn {
+      a {
+        text-decoration: none;
+      }
+    }
+    p {
+      margin: 0;
+    }
+    .singer {
+      font-weight: 600;
+    }
+    .times2 {
+      color: var(--dark-2);
+    }
+    &:not(:first-child) {
+      margin-top: 16px;
+    }
+  }
+}
+@media (min-width: 2400px) {
+  .scheduleList {
+    .item {
+      padding: 32px;
+      .times {
+        width: 150px;
+        height: 150px;
+        font-size: 32px;
+        .date {
+          font-size: 32px;
+          line-height: 32px;
+        }
+      }
+      p {
+        font-size: 32px;
+      }
+      .singer {
+        font-weight: 600;
+      }
+      .times2 {
+        color: var(--dark-2);
+      }
+      &:not(:first-child) {
+        margin-top: 16px;
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .scheduleList {
+    .item {
+      padding: 16px;
+      gap: 12px;
+      .times {
+        font-size: 10px;
+        .date {
+          font-size: 14px;
+        }
+      }
+      &:not(:first-child) {
+        margin-top: 12px;
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .scheduleList {
+    .item {
+      flex-wrap: wrap;
+      .textDta {
+        width: calc(100% - 76px);
+      }
+      .actionBtn {
+        width: 100%;
+        button {
+          width: 100%;
+        }
+      }
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}
+@media (max-width: 425px) {
+  .scheduleList {
+    p {
+      font-size: 12px;
+    }
+  }
+}
+@media (max-width: 360px) {
+  .scheduleList {
+    .blockElement {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.bannerWrapper {
+  background: url("/images/home-banner.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  .bannerWrap {
+    padding: 180px 0 48px;
+    color: var(--white-100);
+  }
+}
+
+@media (min-width: 2400px) {
+  .bannerWrapper {
+    .bannerWrap {
+      padding: 280px 0 100px;
+    }
+  }
+}

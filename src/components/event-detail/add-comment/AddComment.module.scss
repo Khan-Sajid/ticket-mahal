@@ -1,0 +1,272 @@
+.modalWrapper {
+  margin: auto;
+  width: 686px;
+  padding: 12px 40px;
+  background: var(--white-100);
+  border-radius: 4px;
+  background: var(--white-100);
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s;
+  position: relative;
+  overflow: auto;
+  max-height: 100vh;
+}
+.modalHeading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  .crossIcon {
+    font-size: 20px;
+    background: var(--light-1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    transition: 0.3s;
+    cursor: pointer;
+    position: absolute;
+    right: 14px;
+    top: 14px;
+  }
+}
+.commentWrap {
+  padding: 56px 42px;
+  h4 {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--black-100);
+    text-align: center;
+  }
+  .ratingWrap {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    margin: 12px 0 52px;
+    .Icon {
+      cursor: pointer;
+      svg {
+        font-size: 43px;
+        color: var(--light-9);
+        &.active {
+          color: var(--tertery-2);
+        }
+      }
+    }
+  }
+  textarea {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--light-9);
+    padding: 12px;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  button {
+    width: 60%;
+    justify-content: center;
+    margin: auto;
+  }
+}
+.successWrap {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+  text-align: center;
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--black-100);
+    margin: 0;
+  }
+  p {
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--black-100);
+    margin: 0;
+  }
+}
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@media (min-width: 2400px) {
+  .modalWrapper {
+    width: 1200px;
+  }
+  .modalHeading {
+    .crossIcon {
+      font-size: 40px;
+      width: 64px;
+      height: 64px;
+    }
+  }
+  .commentWrap {
+    h4 {
+      font-size: 52px;
+    }
+    .ratingWrap {
+      gap: 12px;
+      margin: 32px 0 68px;
+      .Icon {
+        svg {
+          font-size: 90px;
+        }
+      }
+    }
+    textarea {
+      font-size: 36px;
+      padding: 20px;
+      margin-bottom: 42px;
+    }
+    button {
+      width: 50%;
+    }
+  }
+  .successWrap {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--black-100);
+      margin: 0;
+    }
+    p {
+      font-size: 14px;
+      line-height: 21px;
+      color: var(--black-100);
+      margin: 0;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .commentWrap {
+    padding: 56px 42px;
+    h4 {
+      font-size: 20px;
+    }
+    .ratingWrap {
+      margin: 12px 0 24px;
+    }
+    button {
+      width: 50%;
+    }
+  }
+  .successWrap {
+    padding: 50px 20px;
+    gap: 8px;
+    h3 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .modalWrapper {
+    max-width: 100%;
+    border-radius: 24px 24px 0 0;
+  }
+  @-webkit-keyframes slideIn {
+    from {
+      top: auto;
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      top: auto;
+
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      top: auto;
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      top: auto;
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}
+@media (max-width: 575px) {
+  .modalWrapper {
+    width: 100%;
+    padding: 32px 20px;
+    border-radius: 24px 24px 0 0;
+    position: absolute;
+    bottom: 0;
+  }
+  .commentWrap {
+    padding: 0;
+    textarea {
+      margin-bottom: 24px;
+    }
+    button {
+      width: 100%;
+    }
+  }
+  /* Add Animation */
+  @-webkit-keyframes slideIn {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}
