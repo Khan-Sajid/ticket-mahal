@@ -1,0 +1,49 @@
+{
+  "name": "ticket-mahal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "lint": "next lint",
+    "test": "NODE_ENV=test jest",
+    "test:watch": "NODE_ENV=test jest --watch",
+    "test:coverage": "NODE_ENV=test jest --coverage",
+    "test:cypress": "NODE_ENV=test cypress open",
+    "lint:watch": "esw . --watch --cache",
+    "lint:watchAll": "esw . --watch",
+    "circleci:run": "circleci local execute --job $JOB"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-regular-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@reduxjs/toolkit": "^2.2.7",
+    "bootstrap": "^5.3.3",
+    "classnames": "^2.5.1",
+    "cookies-next": "^4.3.0",
+    "jotai": "^2.10.3",
+    "next": "14.2.5",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-otp-input": "^3.1.1",
+    "react-redux": "^9.1.2",
+    "react-slick": "^0.30.2",
+    "react-toastify": "^11.0.2",
+    "redux-persist": "^6.0.0",
+    "sass": "^1.77.8",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-slick": "^0.23.13",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "typescript": "^5"
+  }
+}
