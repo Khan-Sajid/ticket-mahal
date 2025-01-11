@@ -3,7 +3,6 @@ import { deleteCookie, getCookie, setCookie } from "cookies-next";
 
 export const loginCookieName = "tku";
 export const loginRefreshToken = "rtku";
-export const domain = process.env.NEXT_PUBLIC_DOMAIN;
 
 export function getUserDetail() {
   const loginDetails = getCookie(loginCookieName);
@@ -26,11 +25,7 @@ export function login(data: IUserCompleteDetails) {
   const loginPayload = getLoginPayload(data);
   const refreshToken = extractRefreshToken(data);
   if (loginPayload) {
-    setCookie(loginCookieName, JSON.stringify(loginPayload), {
-      //Expires after 90 days.
-      expires: new Date(new Date().setDate(new Date().getDate() + 90)),
-      domain,
-    });
+    setCookie(loginCookieName, JSON.stringify(loginPayload));
   }
   if (refreshToken) {
     setCookie(loginRefreshToken, JSON.stringify(refreshToken));
@@ -38,8 +33,8 @@ export function login(data: IUserCompleteDetails) {
 }
 
 export function logout() {
-  deleteCookie(loginCookieName, { domain });
-  localStorage.removeItem(loginRefreshToken);
+  deleteCookie(loginCookieName);
+  deleteCookie(loginRefreshToken);
 }
 
 export function getLoginPayload(data: IUserCompleteDetails) {
